@@ -655,9 +655,6 @@ extension NavigationViewController: NavigationServiceDelegate {
     }
     
     @objc public func navigationService(_ service: NavigationService, didUpdate progress: RouteProgress, with location: CLLocation, rawLocation: CLLocation) {
-        
-        //Check to see if we're in a tunnel.
-        checkTunnelState(at: location, along: progress)
 
         // If the user has arrived, don't snap the user puck.
         // In the case the user drives beyond the waypoint,
